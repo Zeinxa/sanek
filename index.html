@@ -32,8 +32,8 @@
 </head>
 <body>
 
-  <h1>labubu explosivo</h1>
-  <div id="score">Pontuação: 0</div>
+  <h1>🪱 Labubu Explosivo: A Saga Continua</h1>
+  <div id="score">Pontuação: 0 (boa sorte com isso)</div>
   <canvas id="gameCanvas" width="400" height="400"></canvas>
 
   <script>
@@ -55,7 +55,7 @@
     function gameLoop() {
       moveSnake();
       if (checkGameOver()) {
-        alert("você morreu bobão haha! Sua pontuação foi: " + score);
+        alert("💀 Não era bem assim que deveria funcionar...\n\nSua pontuação foi: " + score + "\n\n(Vai, tenta de novo, dessa vez vai 👻)");
         resetGame();
         return;
       }
@@ -103,7 +103,7 @@
     function checkFoodCollision() {
       if (snake[0].x === food.x && snake[0].y === food.y) {
         score += 10;
-        document.getElementById("score").innerText = "Pontuação: " + score;
+        document.getElementById("score").innerText = "Pontuação: " + score + " (uau, que impressionante!)";
         
         // Aumenta o tamanho da cobra
         snake.push({...snake[snake.length - 1]});
@@ -141,7 +141,7 @@
       dx = 0;
       dy = 0;
       score = 0;
-      document.getElementById("score").innerText = "Pontuação: " + score;
+      document.getElementById("score").innerText = "Pontuação: 0 (boa sorte com isso)";
       food = { x: 15, y: 15 };
     }
 
